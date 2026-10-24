@@ -26,4 +26,12 @@ async def image(ctx):
     time.sleep(0.2)
     await ctx.send("Esto es un ejemplo de lo que podrias hacer.")
 
+razones = ["El calentamiento va a hacer que tucasa este a mucha temperatura.", "Las extracciones de materiales como el petroleo pueden hacer que destruyan areas naturales."]
+
+@bot.command()
+async def reason(ctx):
+    razon = random.choice(razones)
+    await ctx.send(razon)
+
+
 bot.run("")
